@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './about-us.component.css'
 })
 export class AboutUsComponent {
+  selectedRating: number | null = null; 
+  selectedInterest: string = 'None';
 
+  
+  updateRating(interest: string): void {
+    this.selectedInterest = interest;
+}
 }

@@ -802,37 +802,37 @@
                             <label for="message">What do you have to say to us?</label>
                             <textarea name="message" placeholder="Start typing..."></textarea>
                             <div class="rating-container-cnt">
-                                <p class="rating-text" class="label-cnt">Please select your interests:</p>
+                                <p class="rating-text">Please select your interests:</p>
                                 <div class="stars-cnt">
-                                    <input type="radio" id="star5" name="rating" value="5" />
-                                    <label for="star5" class="star" data-tooltip="Marketing">&#9733;</label>
-                                    <input type="radio" id="star4" name="rating" value="4" />
-                                    <label for="star4" class="star" data-tooltip="Web Development">&#9733;</label>
-                                    <input type="radio" id="star3" name="rating" value="3" />
-                                    <label for="star3" class="star" data-tooltip="Graphic Design">&#9733;</label>
-                                    <input type="radio" id="star2" name="rating" value="2" />
-                                    <label for="star2" class="star" data-tooltip="Consulting">&#9733;</label>
-                                    <input type="radio" id="star1" name="rating" value="1" />
-                                    <label for="star1" class="star" data-tooltip="Influencer Marketing">&#9733;</label>
+                                    <input type="radio" id="star5" name="rating" value="5" [(ngModel)]="selectedRating" (change)="updateRating('Marketing')" />
+                                    <label for="star5" class="star" [attr.data-tooltip]="'Marketing'">&#9733;</label>
+                                    <input type="radio" id="star4" name="rating" value="4" [(ngModel)]="selectedRating" (change)="updateRating('Web Development')" />
+                                    <label for="star4" class="star" [attr.data-tooltip]="'Web Development'">&#9733;</label>
+                                    <input type="radio" id="star3" name="rating" value="3" [(ngModel)]="selectedRating" (change)="updateRating('Graphic Design')" />
+                                    <label for="star3" class="star" [attr.data-tooltip]="'Graphic Design'">&#9733;</label>
+                                    <input type="radio" id="star2" name="rating" value="2" [(ngModel)]="selectedRating" (change)="updateRating('Consulting')" />
+                                    <label for="star2" class="star" [attr.data-tooltip]="'Consulting'">&#9733;</label>
+                                    <input type="radio" id="star1" name="rating" value="1" [(ngModel)]="selectedRating" (change)="updateRating('Influencer Marketing')" />
+                                    <label for="star1" class="star" [attr.data-tooltip]="'Influencer Marketing'">&#9733;</label>
                                 </div>
-                                <div class="rating-display">Selected: None</div>
+                                <div class="rating-display">Selected: {{ selectedInterest }}</div>
                             </div>
                         </div>
                         <div class="input-container-cnt">
                             <div class="name-container-cnt">
-                                <label class="label-cnt" for="name">Name*</label>
-                                <input class="input-cnt" type="text" name="name" placeholder="Type your name..." required />
+                                <label for="name">Name*</label>
+                                <input type="text" name="name" placeholder="Type your name..." required />
                             </div>
                             <div class="email-container-cnt">
-                                <label class="label-cnt" for="email">Email*</label>
-                                <input class="input-cnt" type="text" name="email" placeholder="Type your e-mail..." required />
+                                <label for="email">Email*</label>
+                                <input type="text" name="email" placeholder="Type your e-mail..." required />
                             </div>
                             <div class="phone-container-cnt">
-                                <label class="label-cnt" for="phone">Phone</label>
-                                <input class="input-cnt" type="text" name="phone" placeholder="(555) 555-5555" />
+                                <label for="phone">Phone</label>
+                                <input type="text" name="phone" placeholder="(555) 555-5555" />
                             </div>
                             <div class="button-container-cnt">
-                                <button type="submit" name="submit" class="btn-cnt">SEND</button>
+                                <button type="submit" name="submit">SEND</button>
                             </div>
                         </div>
                     </form>
@@ -961,10 +961,10 @@
                             <fa-icon [icon]="['fas', 'envelope']"></fa-icon>
                             <a href="tel:+9381776396" style="color: white;">
                                 <fa-icon [icon]="['fas', 'phone']"></fa-icon>
-                            </a>                            
+                            </a>
                             <fa-icon [icon]="['fab', 'twitter']"></fa-icon>
                             <a href="https://wa.me/9381776396" target="_blank" rel="noopener noreferrer" style="color: white;">
-                            <fa-icon [icon]="['fab', 'whatsapp']" ></fa-icon>
+                                <fa-icon [icon]="['fab', 'whatsapp']"></fa-icon>
                             </a>
                         </div>
                     </button>

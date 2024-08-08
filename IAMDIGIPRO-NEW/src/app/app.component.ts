@@ -156,4 +156,11 @@ export class AppComponent implements OnInit {
   toggleFaq(index: number) {
     this.faqs[index].isOpen = !this.faqs[index].isOpen;
   }
+  selectedRating: number | null = null; 
+  selectedInterest: string = 'None';
+
+  
+  updateRating(interest: string): void {
+    this.selectedInterest = interest;
+}
 }
