@@ -8,4 +8,12 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 })
 export class AboutUsComponent {
   faArrowRight = faArrowRight;
+
+  selectedRating: number | null = null; 
+  selectedInterest: string = 'None';
+
+  
+  updateRating(interest: string): void {
+    this.selectedInterest = interest;
+}
 }
