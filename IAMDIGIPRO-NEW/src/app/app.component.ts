@@ -1,6 +1,8 @@
 import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
+import { faInstagram, faFacebook, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faArrowUp, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -62,6 +64,12 @@ export class AppComponent implements OnInit {
       isOpen: false
     }
   ];
+  faInstagram = faInstagram;
+  faFacebook = faFacebook;
+  faLinkedin = faLinkedin;
+  faYoutube = faYoutube;
+  faArrowUp = faArrowUp;
+  faArrowRight = faArrowRight;
 
   constructor(private router: Router, private meta: Meta, private title: Title) {}
 
@@ -156,4 +164,11 @@ export class AppComponent implements OnInit {
   toggleFaq(index: number) {
     this.faqs[index].isOpen = !this.faqs[index].isOpen;
   }
+  selectedRating: number | null = null; 
+  selectedInterest: string = 'None';
+
+  
+  updateRating(interest: string): void {
+    this.selectedInterest = interest;
+}
 }
