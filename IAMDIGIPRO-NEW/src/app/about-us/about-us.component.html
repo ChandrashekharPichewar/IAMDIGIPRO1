@@ -255,7 +255,7 @@
                     </p>
                 </div>
                 <div class="enquiry-background-container">
-                    <h1 class="enquiry-heading">Let's Collab <i class="fa-solid fa-arrow-right" style="color: white;"></i></h1>
+                    <h1 class="enquiry-heading">Let's Collab <fa-icon [icon]="faArrowRight"></fa-icon></h1>
                 </div>
             </div>
 
@@ -300,35 +300,6 @@
                     </div>
                 </form>
             </div>
-        </div>
-        <div class="enquiry-background-container">
-            <h1 class="enquiry-heading">Let's Collab <fa-icon [icon]="faArrowRight"></fa-icon></h1>
-
-        <div id="formContainer" class="modal-form-container">
-            <form class="modal-form">
-                <i class="fa-solid fa-circle-xmark cl-icon" onclick="closeForm()" style="float: right; color: white;"></i>
-
-                <h1 style="font-size: small; margin: 5px;">I am Interested in</h1>
-                <div class="interest-buttons">
-                    <div>
-                        <button type="button" style="font-size: x-small;">Digital Marketing</button>
-                        <button type="button" style="font-size: x-small;">Web Development</button>
-                    </div>
-                    <div>
-                        <button type="button" style="font-size: x-small;">Graphic Design</button>
-                        <button type="button" style="font-size: x-small;">Consulting</button>
-                        <button type="button" style="font-size: x-small;">Influencer Marketing</button>
-                    </div>
-                </div>
-                <label for="name">I am</label>
-                <input type="text" id="name" name="name" placeholder="John" required />
-                <label for="phone">Phone number</label>
-                <input type="tel" id="phone" name="phone" required />
-                <label for="email">Email <span style="color: rgb(109, 109, 108);">(Optional)</span></label>
-                <input type="email" id="email" name="email" placeholder="iam@gmail.com" />
-                <button type="submit" class="enquiry-send-button" style="padding: 10px; margin-right: 15px; font-size: small;">Send</button>
-            </form>
-        </div>
         </div>
     </body>
 </html>
